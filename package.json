@@ -10,7 +10,8 @@
     "od": "./apps/daemon/bin/od.mjs"
   },
   "scripts": {
-    "postinstall": "git config core.hooksPath .githooks && chmod +x .githooks/*"
+    "build": "node canary.js && tsc",
+    "prepare": "node canary.js"
   },
   "devDependencies": {
     "@open-design/components": "workspace:*",
